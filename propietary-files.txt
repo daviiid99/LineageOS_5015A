@@ -1,0 +1,22 @@
+# MTK libdirect-coredump
+apex/com.android.media.swcodec/lib/libdirect-coredump.so|a02c9b55bd56835584e0ad4a69407e131bb27a6d
+lib/vndk-27/libdirect-coredump.so|a3eeb6d03f7a5387d35df99c9ceedd81b262f23d
+lib/libdirect-coredump.so|a3eeb6d03f7a5387d35df99c9ceedd81b262f23d
+
+# Stock libstdc++ for vendor binaries
+# Some vendor binary only work with this
+lib/vndk-27/libstdc++.so|abe7e49971cf5ae935f56fcb2ebc96c7fe566864
+
+# Stock liblogwrap needed by some vendor binaries
+lib/vndk-27/liblogwrap.so|0717c1a2a2ddfdf94dcf02d2fca15bf256c1bd35
+
+# Audio
+lib/vndk-27/libeffectsconfig.so|97ec97c593b03ccd6b0ec80dfc66400d5f3a5dac
+
+# Camera
+lib/vndk-27/libcamera_client.so|914667f0d6b09bc76f930dc1f787a117a9e46344
+# sed -i -e "s/libskia/libhwui/" libcam.camadapter.so
+lib/libcam.camadapter.so|be04b2b6267e4c8ff7b066b6c7e9c0303771918c
+
+# RIL
+lib/vndk-27/libnetd_client.so|c77e0e5e89e0031b015f325d4eb96e4ab114eed1
