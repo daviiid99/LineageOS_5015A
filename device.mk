@@ -1,10 +1,10 @@
 DEVICE_PATH := device/tcl/5015A
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l_mr1.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/tcl/5015A/pixi-vendor.mk)
+$(call inherit-product-if-exists, vendor/tcl/5015a/pixi-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
