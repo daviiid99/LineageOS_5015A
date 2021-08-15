@@ -11,7 +11,7 @@ $(call inherit-product, device/tcl/5015A/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_5015A
+PRODUCT_NAME := lineage_pixi
 PRODUCT_DEVICE := 5015A
 PRODUCT_BRAND := TCL
 PRODUCT_MODEL :=TCL 5015A
