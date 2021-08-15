@@ -1,6 +1,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),5015A)
+ifeq ($(TARGET_DEVICE),pixi)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
