@@ -43,8 +43,8 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.mt6739.rc \
-    init.wifi.mt6739.sh \
+    init.mt6560.rc \
+    init.wifi.mt6580.sh \
     fstab.enableswap
 
 # Media
@@ -59,18 +59,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lib_driver_cmd_mt66xx \
     libwifi-hal-mt66xx \
-    wifi_hal \
-    libwpa_client \
-    hostapd \
-    hostapd_cli \
-    dhcpcd.conf \
-    wpa_supplicant \
-    wpa_supplicant.conf
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
-    $(LOCAL_PATH)/configs/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
-    $(LOCAL_PATH)/configs/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny
+    wifi_hal 
     
     # FMRadio
 PRODUCT_PACKAGES += \
@@ -82,6 +71,9 @@ PRODUCT_PACKAGES += \
     libfmmt6628 \
     libfmmt6630 \
     libmtkplayer
+    
+    # GSM
+PRODUCT_PACKAGES += libmt6580
     
     # GPS
 PRODUCT_COPY_FILES += \
@@ -107,6 +99,10 @@ PRODUCT_BOOT_JARS += \
 # Trust HAL
 PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
+    
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
     
  # Thermal
 PRODUCT_PACKAGES += \
