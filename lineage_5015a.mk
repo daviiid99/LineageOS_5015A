@@ -11,10 +11,10 @@ $(call inherit-product, device/tcl/5015a/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_pixi
-PRODUCT_DEVICE := pixi
+PRODUCT_NAME := lineage_5015a
+PRODUCT_DEVICE := 5015a
 PRODUCT_BRAND := TCL
-PRODUCT_MODEL :=TCL pixi
+PRODUCT_MODEL :=TCL 5015a
 PRODUCT_MANUFACTURER := TCL
 
 # Product characteristics
@@ -31,5 +31,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.skia.ignore_swizzle=true \
 
 # GMS
-PRODUCT_GMS_CLIENTID_BASE := android-pixi
+PRODUCT_GMS_CLIENTID_BASE := android-TCL
 
