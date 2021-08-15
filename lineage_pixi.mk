@@ -5,7 +5,7 @@
 #
 
 # Inherit from k-touch i9 device
-$(call inherit-product, device/tcl/5015A/device.mk)
+$(call inherit-product, device/tcl/5015a/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
