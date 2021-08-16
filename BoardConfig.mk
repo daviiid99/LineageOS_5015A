@@ -1,7 +1,5 @@
 DEVICE_PATH := device/tcl/5015a
 
-BOARD_VENDOR := tcl
-
 # Assertions
 TARGET_OTA_ASSERT_DEVICE := 5015A
 
@@ -17,8 +15,6 @@ TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
-
-TARGET_USES_64_BIT_BINDER := false
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -47,9 +43,6 @@ BUILD_WITHOUT_VENDOR := true
 # Avb
 BOARD_AVB_ENABLE := false
 
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
-
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
@@ -74,10 +67,6 @@ TARGET_BOARD_PLATFORM := mt6580
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := mt6580
 
-
-# Properties
-BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
-
 # Recovery
 BOARD_USES_RECOVERY_AS_BOOT := false
 TARGET_NO_RECOVERY := false
@@ -86,7 +75,5 @@ TARGET_NO_RECOVERY := false
 BOARD_VNDK_VERSION := current
 PRODUCT_TARGET_VNDK_VERSION := 27
 PRODUCT_EXTRA_VNDK_VERSIONS := 27
-TARGET_CUSTOM_LDCONFIG_TEMPLATE_27 := $(DEVICE_PATH)/configs/ld.config.txt
-DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
 
 -include vendor/tcl/5015a/BoardConfigVendor.mk
