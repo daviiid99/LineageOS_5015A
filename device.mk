@@ -6,11 +6,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l_mr1.mk
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/tcl/5015a/pixi-vendor.mk)
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
-
 # A/B
 AB_OTA_UPDATER := false
 
@@ -35,15 +30,9 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
     android.hardware.health@2.0-service
 
-# Fstab
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6739:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6739
-
 # Init
 PRODUCT_PACKAGES += \
     init.mt6560.rc \
-    init.wifi.mt6580.sh \
-    fstab.enableswap
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -58,28 +47,10 @@ PRODUCT_PACKAGES += \
     lib_driver_cmd_mt66xx \
     libwifi-hal-mt66xx \
     wifi_hal 
-    
-    # FMRadio
-PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmcust \
-    libfmjni \
-    libfmmt6620 \
-    libfmmt6627 \
-    libfmmt6628 \
-    libfmmt6630 \
-    libmtkplayer
+   
     
     # GSM
 PRODUCT_PACKAGES += libmt6580
-    
-    # GPS
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml \
-
-PRODUCT_PACKAGES += \
-    gps.mt6580 \
-    YGPS
     
     # Bluetooth
 PRODUCT_PACKAGES += \
