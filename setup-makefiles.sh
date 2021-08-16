@@ -38,7 +38,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" true
 
 # Copyright headers and guards
-write_headers "i9"
+write_headers "5015a"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
