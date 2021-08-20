@@ -28,19 +28,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
     
-    # Lights
-PRODUCT_PACKAGES += \
-    lights.mt6580
-    
  # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
     android.hardware.health@2.0-service
-
-# Init
-PRODUCT_PACKAGES += \
-    init.mt6580.rc \
-
+    
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_mediatek_video.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_mediatek_video.xml
@@ -49,28 +41,29 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.secure_lock_screen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.secure_lock_screen.xml
 
-# Wifi
+
+# WiFi
 PRODUCT_PACKAGES += \
-    lib_driver_cmd_mt66xx \
-    libwifi-hal-mt66xx \
-    wifi_hal 
-   
-    
-    # GSM
-PRODUCT_PACKAGES += libmt6580
+    libkeystore-wifi-hidl \
+    libkeystore-engine-wifi-hidl
     
     # Bluetooth
 PRODUCT_PACKAGES += \
     libldacBT_dec \
     libbtconfigstore
     
+    
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext \
+    mtk-telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+    
 # Trust HAL
 PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
-    
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
     
  # Thermal
 PRODUCT_PACKAGES += \
