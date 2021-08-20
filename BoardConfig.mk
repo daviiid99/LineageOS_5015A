@@ -1,4 +1,11 @@
+#Device Path
 DEVICE_PATH := device/tcl/5015a
+
+#Vendor
+BOARD_VENDOR := tcl
+
+# APEX
+TARGET_FLATTEN_APEX := true
 
 # Assertions
 TARGET_OTA_ASSERT_DEVICE := 5015A
@@ -9,22 +16,6 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := generic
-
-TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv7-a-neon
-TARGET_2ND_CPU_ABI := armeabi-v7a
-TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := generic
-
-# File systems
-BOARD_HAS_LARGE_FILESYSTEM := true
-#BOARD_RECOVERYIMAGE_PARTITION_SIZE := 10235904 # This is the maximum known partition size, but it can be higher, so we just omit it
-BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
-BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
-TARGET_COPY_OUT_VENDOR := vendor
 
 # Partition Size
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -75,5 +66,5 @@ TARGET_NO_RECOVERY := false
 BOARD_VNDK_VERSION := current
 PRODUCT_TARGET_VNDK_VERSION := 27
 PRODUCT_EXTRA_VNDK_VERSIONS := 27
-
+TARGET_CUSTOM_LDCONFIG_TEMPLATE_27 := $(DEVICE_PATH)/configs/ld.config.txt
 -include vendor/tcl/5015a/BoardConfigVendor.mk
