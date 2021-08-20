@@ -1,4 +1,3 @@
-DEVICE_PATH := device/tcl/5015a
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l_mr1.mk)
@@ -33,6 +32,15 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
     android.hardware.health@2.0-service
     
+    # Fstab
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6580:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6739
+
+# Init
+PRODUCT_PACKAGES += \
+    init.mt6580.rc \
+    fstab.enableswap
+    
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_mediatek_video.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_mediatek_video.xml
@@ -47,11 +55,10 @@ PRODUCT_PACKAGES += \
     libkeystore-wifi-hidl \
     libkeystore-engine-wifi-hidl
     
-    # Bluetooth
+# Bluetooth
 PRODUCT_PACKAGES += \
     libldacBT_dec \
     libbtconfigstore
-    
     
 # Telephony
 PRODUCT_PACKAGES += \
