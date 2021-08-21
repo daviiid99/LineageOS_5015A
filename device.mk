@@ -10,8 +10,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
-include vendor/mediatek/hardware/telephony-ext/overlay.mk
-
 # A/B
 AB_OTA_UPDATER := false
 
@@ -34,7 +32,7 @@ PRODUCT_PACKAGES += \
     
     # Fstab
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6580:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6739
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6580:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6580
 
 # Init
 PRODUCT_PACKAGES += \
@@ -59,11 +57,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libldacBT_dec \
     libbtconfigstore
-    
-# Telephony
-PRODUCT_PACKAGES += \
-    telephony-ext \
-    mtk-telephony-ext
     
 # Trust HAL
 PRODUCT_PACKAGES += \
