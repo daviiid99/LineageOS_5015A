@@ -40,16 +40,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.mt6580.rc \
     fstab.enableswap
- 
- #Bootjar
-PRODUCT_BOOT_JARS += api.pure
-PRODUCT_BOOT_JARS += core-obj
-PRODUCT_BOOT_JARS += core-oj
-PRODUCT_BOOT_JARS += core-libpart
-PRODUCT_BOOT_JARS += core-libart
-PRODUCT_BOOT_JARS += okhttp
-PRODUCT_BOOT_JARS += bouncycastle
-PRODUCT_BOOT_JARS += apache-xml
 
 # Media
 PRODUCT_COPY_FILES += \
