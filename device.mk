@@ -42,17 +42,13 @@ PRODUCT_PACKAGES += \
     fstab.enableswap
  
  #Bootjar
-PRODUCT_PACKAGES += api.pure
 PRODUCT_BOOT_JARS += api.pure
-PRODUCT_PACKAGES += core-obj
 PRODUCT_BOOT_JARS += core-obj
-PRODUCT_PACKAGES += core-libpart
+PRODUCT_BOOT_JARS += core-oj
 PRODUCT_BOOT_JARS += core-libpart
-PRODUCT_PACKAGES += okhttp
+PRODUCT_BOOT_JARS += core-libart
 PRODUCT_BOOT_JARS += okhttp
-PRODUCT_PACKAGES += bouncycastle
 PRODUCT_BOOT_JARS += bouncycastle
-PRODUCT_PACKAGES += apache-xml
 PRODUCT_BOOT_JARS += apache-xml
 
 # Media
