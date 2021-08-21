@@ -40,7 +40,21 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.mt6580.rc \
     fstab.enableswap
-    
+ 
+ #Bootjar
+PRODUCT_PACKAGES += api.pure
+PRODUCT_BOOT_JARS += api.pure
+PRODUCT_PACKAGES += core-obj
+PRODUCT_BOOT_JARS += core-obj
+PRODUCT_PACKAGES += core-libpart
+PRODUCT_BOOT_JARS += core-libpart
+PRODUCT_PACKAGES += okhttp
+PRODUCT_BOOT_JARS += okhttp
+PRODUCT_PACKAGES += bouncycastle
+PRODUCT_BOOT_JARS += bouncycastle
+PRODUCT_PACKAGES += apache-xml
+PRODUCT_BOOT_JARS += apache-xml
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_mediatek_video.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_mediatek_video.xml
