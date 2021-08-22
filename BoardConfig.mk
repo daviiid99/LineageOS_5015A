@@ -1,11 +1,13 @@
+#
+# Copyright (C) 2021 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
 
 DEVICE_PATH := device/tcl/5015a
 
 #Vendor
 BOARD_VENDOR := tcl
-
-# APEX
-TARGET_FLATTEN_APEX := true
 
 # Assertions
 TARGET_OTA_ASSERT_DEVICE := 5015A
@@ -72,10 +74,6 @@ TARGET_OTA_ASSERT_DEVICE := 5015a
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6580
-
-# Recovery
-BOARD_USES_RECOVERY_AS_BOOT := false
-TARGET_NO_RECOVERY := false
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
