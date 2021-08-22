@@ -1,0 +1,42 @@
+/dev/block/platform/bootdevice/by-name/system / ext4 ro wait,recoveryonly
+
+/dev/block/platform/bootdevice/by-name/vendor /vendor ext4 ro wait,recoveryonly
+/dev/block/platform/bootdevice/by-name/userdata /data f2fs noatime,nosuid,nodev,discard,noflush_merge wait,check,formattable,resize,reservedsize=512m,forcefdeorfbe=/dev/block/platform/bootdevice/by-name/metadata
+/dev/block/platform/bootdevice/by-name/cache /cache ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable
+
+/dev/block/platform/bootdevice/by-name/protect1 /mnt/vendor/protect_f ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
+/dev/block/platform/bootdevice/by-name/protect2 /mnt/vendor/protect_s ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
+/dev/block/platform/bootdevice/by-name/nvdata /mnt/vendor/nvdata ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable
+
+/dev/block/platform/bootdevice/by-name/persist /mnt/vendor/persist ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
+
+
+
+/dev/block/platform/bootdevice/by-name/frp /persistent emmc defaults defaults
+
+
+/devices/platform/externdevice* auto auto defaults voldmanaged=sdcard1:auto,encryptable=userdata
+
+/dev/block/platform/bootdevice/by-name/nvram /nvram emmc defaults defaults
+/dev/block/platform/bootdevice/by-name/proinfo /proinfo emmc defaults defaults
+/dev/block/platform/bootdevice/by-name/lk /bootloader emmc defaults defaults
+
+/dev/block/platform/bootdevice/by-name/lk2 /bootloader2 emmc defaults defaults
+
+/dev/block/platform/bootdevice/by-name/para /misc emmc defaults defaults
+/dev/block/platform/bootdevice/by-name/boot /boot emmc defaults defaults
+/dev/block/platform/bootdevice/by-name/recovery /recovery emmc defaults defaults
+/dev/block/platform/bootdevice/by-name/logo /logo emmc defaults defaults
+/dev/block/platform/bootdevice/by-name/expdb /expdb emmc defaults defaults
+/dev/block/platform/bootdevice/by-name/secro /secro emmc defaults defaults
+/dev/block/platform/bootdevice/by-name/seccfg /seccfg emmc defaults defaults
+
+/dev/block/platform/bootdevice/by-name/tee1 /tee1 emmc defaults defaults
+/dev/block/platform/bootdevice/by-name/tee2 /tee2 emmc defaults defaults
+
+
+/dev/block/platform/bootdevice/by-name/odmdtbo /odmdtbo emmc defaults defaults
+/dev/block/platform/bootdevice/by-name/dtbo /dtbo emmc defaults defaults
+
+/dev/block/platform/bootdevice/by-name/vbmeta /vbmeta emmc defaults defaults
+/devices/platform/bus/mt_usb* auto auto defaults voldmanaged=usbotg:auto
