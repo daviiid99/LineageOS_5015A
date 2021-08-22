@@ -52,28 +52,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
     
-    # Ramdisk
-PRODUCT_PACKAGES += \
-    factory_init.connectivity.rc \
-    factory_init.project.rc \
-    factory_init.rc \
-    init.aee.rc \
-    init.ago.rc \
-    init.connectivity.rc \
-    init.modem.rc \
-    init.mt6580.rc \
-    init.mt6580.usb.rc \
-    init.nvdata.rc \
-    init.project.rc \
-    init.sensor_1_0.rc \
-    meta_init.connectivity.rc \
-    meta_init.modem.rc \
-    meta_init.project.rc \
-    meta_init.rc \
-    multi_init.rc \
-    fstab.enableswap \
-    fstab.mt6580 \
-    ueventd.qcom.rc \
+   # Ramdisk
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/fstab.mt6580:root/fstab.mt6580 \
+    $(LOCAL_PATH)/rootdir/init.mt6580.rc:root/init.mt6580.rc \
+    $(LOCAL_PATH)/rootdir/init.mt6580.usb.rc:root/init.mt6580.usb.rc \
+    $(LOCAL_PATH)/rootdir/init.recovery.mt6580.rc:root/init.recovery.mt6580.rc \
+    $(LOCAL_PATH)/rootdir/ueventd.rc:root/ueventd.rc
 
 # WiFi
 PRODUCT_PACKAGES += \
