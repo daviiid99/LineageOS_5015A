@@ -637,43 +637,6 @@ service memsicp /vendor/bin/memsicp
     chown system system /proc/perfmgr/legacy/perfserv_freq
     chmod 0664 /proc/perfmgr/legacy/perfserv_freq
 
-##Netlog tool
-   #change permissions about terminal
-    chown root radio /proc/net/vlan/config
-    chmod 0640 /proc/net/vlan/config
-    chown root radio /proc/net/ip6_tables_matches
-    chown root radio /proc/net/ip6_tables_names
-    chown root radio /proc/net/ip6_tables_targets
-    chown root radio /proc/net/arp_tables_targets
-    chown root radio /proc/net/arp_tables_matches
-    chown root radio /proc/net/arp_tables_names
-    chown root radio /proc/net/ip_tables_targets
-    chown root radio /proc/net/ip_tables_matches
-    chown root radio /proc/net/ip_tables_names
-    chown root radio /proc/net/ip_conntrack_expect
-    chown root radio /proc/net/ip_conntrack
-    chown root radio /proc/net/nf_conntrack
-    chown root radio /proc/net/nf_conntrack_expect
-    chown root radio /proc/net/netfilter/nfnetlink_log
-    chown root radio /proc/net/netfilter/nfnetlink_queue
-
-# WMT proc
-    chown shell system /proc/driver/wmt_dbg
-    chown shell system /proc/driver/wmt_aee
-
-#Define device for ATCID
-    chmod 0660 /dev/ttyGS0
-    chown system /dev/ttyGS0
-    chmod 0660 /dev/ttyGS1
-    chown system /dev/ttyGS1
-
-# define device for EMCSMDLOGGER
-    chmod 0660 /dev/ttyGS3
-    chown system radio /dev/ttyGS3
-	
-#define prize smartcover common_node add by liaojie for tp glove mode
-	chmod 0666 /sys/kernel/prize/smartcover/common_node/state
-    chown system system /sys/kernel/prize/smartcover/common_node/state
 
 on property:vold.decrypt=trigger_reset_main
     write /proc/bootprof "INIT:vold.decrypt=trigger_reset_main"
