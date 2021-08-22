@@ -50,7 +50,6 @@ TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_HEADER_ARCH := arm
 TARGET_KERNEL_SOURCE := kernel/tcl/pixi
 TARGET_KERNEL_CONFIG := pixi3_5_defconfig
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
 # Partition Size
 BOARD_FLASH_BLOCK_SIZE := 131072
