@@ -43,6 +43,7 @@ PRODUCT_COPY_FILES += \
 # Init
 PRODUCT_PACKAGES += \
     init.mt6580.rc \
+    fstab.mt6580
 
 # Media
 PRODUCT_COPY_FILES += \
