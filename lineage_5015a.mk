@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2021 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -9,6 +9,7 @@ $(call inherit-product, device/tcl/5015a/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_5015a
