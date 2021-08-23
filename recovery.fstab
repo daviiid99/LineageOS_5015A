@@ -1,44 +1,27 @@
-# 1 "vendor/mediatek/proprietary/hardware/fstab/mt6580/fstab.in"
-# 1 "<built-in>"
-# 1 "<command-line>"
-# 1 "/usr/include/stdc-predef.h" 1 3 4
-# 1 "<command-line>" 2
-# 1 "vendor/mediatek/proprietary/hardware/fstab/mt6580/fstab.in"
-# 107 "vendor/mediatek/proprietary/hardware/fstab/mt6580/fstab.in"
-/dev/block/platform/bootdevice/mtk-msdc.0/system /system ext4 ro wait,recoveryonly
-/dev/block/platform/bootdevice/mtk-msdc.0/vendor /vendor ext4 ro wait,recoveryonly
-/dev/block/platform/bootdevice/mtk-msdc.0/userdata /data ext4 noatime,nosuid,nodev,noauto_da_alloc,errors=panic wait,check,quota,formattable,resize,encryptable=/dev/block/platform/bootdevice/by-name/metadata,
-/dev/block/platform/bootdevice/mtk-msdc.0/cache /cache ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check
-/dev/block/platform/bootdevice/mtk-msdc.0/protect1 /vendor/protect_f ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
-/dev/block/platform/bootdevice/mtk-msdc.0/protect2 /vendor/protect_s ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
-/dev/block/platform/bootdevice/mtk-msdc.0/nvdata /vendor/nvdata ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable
-/dev/block/platform/bootdevice/mtk-msdc.0/nvcfg /vendor/nvcfg ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
-/devices/bootdevice* auto vfat defaults voldmanaged=sdcard0:auto
-/devices/platform/externdevice* auto auto defaults voldmanaged=sdcard1:auto,encryptable=userdata
-/devices/platform/mt_usb* auto vfat defaults voldmanaged=usbotg:auto
-/dev/block/platform/bootdevice/mtk-msdc.0/frp /persistent emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/nvram /nvram emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/proinfo /proinfo emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/lk /bootloader emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/lk2 /bootloader2 emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/para /misc emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/boot /boot emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/recovery /recovery emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/logo /logo emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/expdb /expdb emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/seccfg /seccfg emmc defaults defaults
-/dev/block/platform/bootdevicemtk-msdc.0/tee1 /tee1 emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/tee2 /tee2 emmc defaults defaults
-# 161 "vendor/mediatek/proprietary/hardware/fstab/mt6580/fstab.in"
-/dev/block/platform/bootdevice/mtk-msdc.0/md1img /md1img emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/md1dsp /md1dsp emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/md1arm7 /md1arm7 emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/md3img /md3img emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0g/gz1 /gz1 emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/gz2 /gz2 emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/spmfw /spmfw emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/mcupmfw /mcupmfw emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/boot_para /boot_para emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/odmdtbo /odmdtbo emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/loader_ext1 /loader_ext1 emmc defaults defaults
-/dev/block/platform/bootdevice/mtk-msdc.0/loader_ext2 /loader_ext2 emmc defaults defaults
+/proinfo		emmc	/dev/block/platform/mtk-msdc.0/by-name/proinfo		flags=display="Proinfo";backup=1
+/nvram			emmc	/dev/block/platform/mtk-msdc.0/by-name/nvram		flags=display="Nvram";backup=1;flashimg=1
+/nvdata			ext4	/dev/block/platform/mtk-msdc.0/by-name/nvdata		flags=display="Nvdata";backup=1
+/protect_f		ext4	/dev/block/platform/mtk-msdc.0/by-name/protect1		flags=display="Protect_f";backup=1
+/protect_s		ext4	/dev/block/platform/mtk-msdc.0/by-name/protect2		flags=display="Protect_s";backup=1
+/para			emmc	/dev/block/platform/mtk-msdc.0/by-name/para		flags=display="Para";backup=1
+/lk			emmc	/dev/block/platform/mtk-msdc.0/by-name/lk		flags=display="LK.BIN";backup=1;flashimg=1
+/logo			emmc	/dev/block/platform/mtk-msdc.0/by-name/logo		flags=display="Logo";backup=1;flashimg=1
+/boot			emmc	/dev/block/platform/mtk-msdc.0/by-name/boot		flags=display="Boot";backup=1
+/recovery		emmc	/dev/block/platform/mtk-msdc.0/by-name/recovery		flags=display="Recovery";backup=1
+/oemkeystore		emmc	/dev/block/platform/mtk-msdc.0/by-name/oemkeystore
+/secro			emmc	/dev/block/platform/mtk-msdc.0/by-name/secro		flags=display="Secro";backup=1
+/keystore		emmc	/dev/block/platform/mtk-msdc.0/by-name/keystore
+/custpack		ext4	/dev/block/platform/mtk-msdc.0/by-name/custpack		flags=display="Custpack";backup=1
+/vendor		ext4	/dev/block/platform/mtk-msdc.0/by-name/vendor		flags=display="Vendor";backup=1
+/seccfg			emmc	/dev/block/platform/mtk-msdc.0/by-name/seccfg
+/expdb			emmc	/dev/block/platform/mtk-msdc.0/by-name/expdb
+/mobile_info		emmc	/dev/block/platform/mtk-msdc.0/by-name/mobile_info	flags=display="Mobile_info";backup=1
+/frp			emmc	/dev/block/platform/mtk-msdc.0/by-name/frp		flags=display="FRP";backup=1
+/metadata		emmc	/dev/block/platform/mtk-msdc.0/by-name/metadata
+/system			ext4	/dev/block/platform/mtk-msdc.0/by-name/system
+/system_image		emmc	/dev/block/platform/mtk-msdc.0/by-name/system
+/cache			ext4	/dev/block/platform/mtk-msdc.0/by-name/cache
+/data			ext4	/dev/block/platform/mtk-msdc.0/by-name/userdata		flags=encryptable=/dev/block/platform/mtk-msdc.0/by-name/metadata
+#/flashinfo		emmc	/dev/block/platform/mtk-msdc.0/by-name/flashinfo
+/external_sd		auto	/dev/block/mmcblk1p1	/dev/block/mmcblk1		flags=display="External SD";storage;wipeingui;removable;backup=0
+/usbotg			auto    /dev/block/sda1		/dev/block/sda			flags=display="Usb-otg";storage;removable;backup=0
