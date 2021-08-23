@@ -23,5 +23,3 @@
 /dev/block/platform/mtk-msdc.0/by-name/cache /cache ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check
 /dev/block/platform/mtk-msdc.0/by-name/userdata	/data ext4 noatime,nosuid,nodev,noauto_da_alloc,errors=panic wait,check,quota,formattable,resize,encryptable=/dev/block/platform/bootdevice/by-name/metadata,
 /dev/block/platform/mtk-msdc.0/by-name/flashinfo /flashinfo emmc defaults defaults
-/dev/block/mmcblk1p1	/dev/block/mmcblk1	/external_sd	auto defaults defaults
-/dev/block/sda1		/dev/block/sda /usbotg auto defaults defaults
