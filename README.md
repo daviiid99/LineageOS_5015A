@@ -15,7 +15,7 @@ patch -d frameworks/base -p1 < device/tcl/5015a/patches/frameworks/base/0001-hwu
 patch -d frameworks/base -p1 < device/tcl/5015a/patches/frameworks/base/0002-Fix-crash-on-some-devices-by-checking-for-null-clien.patch
 patch -d frameworks/opt/net/wifi -p1 < device/tcl/5015a/patches/frameworks/opt/net/wifi/0001-Restore-O-O-MR1-behaviour-of-initing-ifaces-before-s.patch
 patch -d system/core -p1 < device/tcl/5015a/patches/system/core/0001-rootdir-add-support-for-custom-ld-template.patch
-patch -d build/soong -p1 < device/tcl/5015a/patches/build/soong/soong.patch
+patch -d ~/android/lineage/ -p1 < device/tcl/5015a/patches/build/soong/soong.patch
 
 #Build
 brunch 5015a
