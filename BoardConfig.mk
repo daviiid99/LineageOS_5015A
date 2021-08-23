@@ -81,4 +81,4 @@ BOARD_VNDK_VERSION := current
 PRODUCT_TARGET_VNDK_VERSION := 27
 PRODUCT_EXTRA_VNDK_VERSIONS := 27
 TARGET_CUSTOM_LDCONFIG_TEMPLATE_27 := $(DEVICE_PATH)/configs/ld.config.txt
--include vendor/tcl/5015a/BoardConfigVendor.mk
+-include $(DEVICE_PATH)/vendor/BoardConfigVendor.mk
