@@ -29,7 +29,7 @@
 /dev/block/platform/bootdevice/mtk-msdc.0/seccfg /seccfg emmc defaults defaults
 /dev/block/platform/bootdevicemtk-msdc.0/tee1 /tee1 emmc defaults defaults
 /dev/block/platform/bootdevice/mtk-msdc.0/tee2 /tee2 emmc defaults defaults
-# 161 "vendor/mediatek/proprietary/hardware/fstab/mt6739/fstab.in"
+# 161 "vendor/mediatek/proprietary/hardware/fstab/mt6580/fstab.in"
 /dev/block/platform/bootdevice/mtk-msdc.0/md1img /md1img emmc defaults defaults
 /dev/block/platform/bootdevice/mtk-msdc.0/md1dsp /md1dsp emmc defaults defaults
 /dev/block/platform/bootdevice/mtk-msdc.0/md1arm7 /md1arm7 emmc defaults defaults
