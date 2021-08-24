@@ -51,14 +51,12 @@ PRODUCT_PACKAGES += \
     
     # Fstab
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/enableswap.sh:root/fstab.enableswap \
-    $(LOCAL_PATH)/rootdir/factory_init.rc:root/factory_init.rc \
-    $(LOCAL_PATH)/rootdir/fstab.mt6580:root/fstab.mt6580 \
-    $(LOCAL_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
-    $(LOCAL_PATH)/rootdir/init.mt6580.rc:root/init.mt6580.rc \
-    $(LOCAL_PATH)/rootdir/init.mt6580.usb.rc:root/init.mt6580.usb.rc \
-    $(LOCAL_PATH)/rootdir/ueventd.mt6580.rc:root/ueventd.mt6580.rc \
-    $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab \
+    $(LOCAL_PATH)/rootdir/fstab.mt6580:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6580 \
+
+# Init
+PRODUCT_PACKAGES += \
+    init.mt6580.rc \
+    fstab.enableswap
 
 # Media
 PRODUCT_COPY_FILES += \
