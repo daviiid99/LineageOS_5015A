@@ -100,6 +100,3 @@ TARGET_CUSTOM_LDCONFIG_TEMPLATE_27 := $(DEVICE_PATH)/configs/ld.config.txt
 
 # Selinux
 BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
-
-# Sepolicy hack for old kernel, mt6580 version is 26.
-POLICYVERS := 26
