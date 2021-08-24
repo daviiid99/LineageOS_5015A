@@ -32,12 +32,6 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     Snap
-    
-PRODUCT_PACKAGES += \
-    Torch
-
-PRODUCT_PACKAGES += \
-    libxlog
 
 # Lights
 PRODUCT_PACKAGES += \
