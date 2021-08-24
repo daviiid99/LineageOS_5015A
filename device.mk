@@ -104,14 +104,6 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-    
-   # Ramdisk
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/fstab.mt6580:root/fstab.mt6580 \
-    $(LOCAL_PATH)/rootdir/init.mt6580.rc:root/init.mt6580.rc \
-    $(LOCAL_PATH)/rootdir/init.mt6580.usb.rc:root/init.mt6580.usb.rc \
-    $(LOCAL_PATH)/rootdir/init.recovery.mt6580.rc:root/init.recovery.mt6580.rc \
-    $(LOCAL_PATH)/rootdir/ueventd.rc:root/ueventd.rc
 
 # WiFi
 PRODUCT_PACKAGES += \
