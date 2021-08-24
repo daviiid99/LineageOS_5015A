@@ -26,13 +26,6 @@ TARGET_ARCH_VARIANT_CPU := cortex-a7
 TARGET_CPU_VARIANT:= cortex-a7
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
-# Enable dex-preoptimization
-WITH_DEXPREOPT := false
-DONT_DEXPREOPT_PREBUILTS := true
-
-# Link against libxlog
-TARGET_LDPRELOAD := libxlog.so
-
 # MTK HARDWARE
 BOARD_HAS_MTK_HARDWARE := true
 MTK_HARDWARE := true
