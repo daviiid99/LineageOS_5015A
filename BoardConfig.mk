@@ -104,3 +104,9 @@ PRODUCT_TARGET_VNDK_VERSION := 27
 PRODUCT_EXTRA_VNDK_VERSIONS := 27
 TARGET_CUSTOM_LDCONFIG_TEMPLATE_27 := $(DEVICE_PATH)/configs/ld.config.txt
 -include $(DEVICE_PATH)/vendor/BoardConfigVendor.mk
+
+# Selinux
+BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
+
+# Sepolicy hack for old kernel, mt6580 version is 26.
+POLICYVERS := 26
