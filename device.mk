@@ -51,7 +51,7 @@ PRODUCT_PACKAGES += \
     
     # Fstab
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/enableswap.sh:root/fstab.enableswap.sh \
+    $(LOCAL_PATH)/rootdir/enableswap.sh:root/fstab.enableswap \
     $(LOCAL_PATH)/rootdir/factory_init.rc:root/factory_init.rc \
     $(LOCAL_PATH)/rootdir/fstab.mt6580:root/fstab.mt6580 \
     $(LOCAL_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
