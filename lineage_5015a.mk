@@ -26,3 +26,7 @@ PRODUCT_AAPT_PREF_CONFIG := mdpi
 TARGET_SCREEN_HEIGHT := 854
 TARGET_SCREEN_WIDTH := 480
 
+# Build info
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vndk.version=27 \
+    ro.skia.ignore_swizzle=true \
