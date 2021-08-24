@@ -7,7 +7,7 @@ repo sync
 source build/envsetup.sh
 
 #Repos
-git clone https://github.com/daviiid99/LineageOS_5015A device/tcl/5015a
+git clone -b ten https://github.com/daviiid99/LineageOS_5015A device/tcl/5015a
 
 #Patches
 patch -d external/skia -p1 < device/tcl/5015a/patches/external/skia/0001-GrGLCaps-allow-ignoring-vendor-supplied-texture-swiz.patch
