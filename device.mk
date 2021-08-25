@@ -17,8 +17,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
     
-    include vendor/mediatek/hardware/telephony-ext/overlay.mk
-
 # A/B
 AB_OTA_UPDATER := false
 
